@@ -1,10 +1,12 @@
 VERSION_SHA1=`git rev-parse --short HEAD`
-VERSION_NUM=`git rev-list --count HEAD`
-BRANCH_NAME=`git rev-parse --abbrev-ref HEAD`
-
 echo \$VERSION_SHA1: $VERSION_SHA1
+
+VERSION_NUM=`git rev-list --count HEAD`
 echo \$VERSION_NUM: $VERSION_NUM
+
+BRANCH_NAME=`git rev-parse --abbrev-ref HEAD`
 echo \$BRANCH_NAME: $BRANCH_NAME
+
 BRANCH_SHA1=$BRANCH_NAME-$VERSION_SHA1
 echo \$BRANCH_SHA1: $BRANCH_SHA1
 
