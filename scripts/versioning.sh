@@ -12,8 +12,8 @@ echo \$BRANCH_NAME: $BRANCH_NAME
 BRANCH_SHA1=$BRANCH_NAME-$VERSION_SHA1
 echo \$BRANCH_SHA1: $BRANCH_SHA1
 
-/bin/sed -i 's/#define VERSION_MAJOR               0/#define VERSION_MAJOR               4/' ConsoleApplication/ConsoleApplication/Version.h
-#/bin/sed -i 's/#define VERSION_MINOR               0/#define VERSION_MINOR               0/' ConsoleApplication/ConsoleApplication/Version.h
-#/bin/sed -i 's/#define VERSION_BUILD               0/#define VERSION_BUILD               0/' ConsoleApplication/ConsoleApplication/Version.h
-/bin/sed -i "s/#define VERSION_PRIVATE             0/#define VERSION_PRIVATE             $VERSION_NUM/" ConsoleApplication/ConsoleApplication/Version.h
-/bin/sed -i "s/#define VERSION_SHA1                \"c0ffee\"/#define VERSION_SHA1                \"$BRANCH_SHA1\"/" ConsoleApplication/ConsoleApplication/Version.h
+/bin/sed -i 's/#define VERSION_MAJOR               0/#define VERSION_MAJOR               4/' ../ConsoleApplication/ConsoleApplication/Version.h
+#/bin/sed -i 's/#define VERSION_MINOR               0/#define VERSION_MINOR               0/' ../ConsoleApplication/ConsoleApplication/Version.h
+#/bin/sed -i 's/#define VERSION_BUILD               0/#define VERSION_BUILD               0/' ../ConsoleApplication/ConsoleApplication/Version.h
+/bin/sed -i "s/#define VERSION_PRIVATE             0/#define VERSION_PRIVATE             $VERSION_NUM/" ../ConsoleApplication/ConsoleApplication/Version.h
+/bin/sed -i "s/#define VERSION_SHA1                \"c0ffee\"/#define VERSION_SHA1                \"$BRANCH_SHA1\"/" ../ConsoleApplication/ConsoleApplication/Version.h
