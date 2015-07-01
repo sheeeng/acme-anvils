@@ -1,3 +1,5 @@
+#!/bin/sh
+
 VERSION_SHA1=`git rev-parse --short HEAD`
 echo \$VERSION_SHA1: $VERSION_SHA1
 
