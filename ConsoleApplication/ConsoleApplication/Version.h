@@ -11,13 +11,8 @@
 #define VERSION_PRIVATE             0
 #define VERSION_SHA1                "c0ffee"
 
-#if (_MSC_VER == 1800)              // Visual C++ 2013 (vc12)
-#define VER_COMMENTS_STR            "Build with Visual Studio 2013."
-#define VER_FILE_DESCRIPTION_STR    VER_PRODUCTNAME_STR " built with msvc12."
-#elif (_MSC_VER == 1700)            // Visual C++ 2012 (vc11)
 #define VER_COMMENTS_STR            "Build with Visual Studio 2012."
 #define VER_FILE_DESCRIPTION_STR    VER_PRODUCTNAME_STR " built with msvc11."
-#endif
 
 #define VER_LEGALTRADEMARKS_STR     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis, elit quis vulputate maximus, sapien lorem mollis lorem, vel rutrum lacus augue at erat." "\r\n" \
                                     "Quisque a placerat nibh. Donec gravida dui eros, id faucibus orci rutrum in. Sed ac diam id turpis facilisis suscipit sit amet non elit. Pellentesque a feugiat purus, vitae laoreet massa. Nam nec dolor in quam accumsan sagittis. Suspendisse eget elementum erat, eu laoreet dui. Vivamus nisl orci, dictum quis condimentum nec, accumsan a libero."
