@@ -5,7 +5,7 @@
 #define VER_PRODUCTNAME_STR         "Acme Anvils"
 #define VER_COMPANYNAME_STR         "Contoso Corporation"
 
-#define VERSION_MAJOR               0             
+#define VERSION_MAJOR               0
 #define VERSION_MINOR               0
 #define VERSION_BUILD               0
 #define VERSION_PRIVATE             0
