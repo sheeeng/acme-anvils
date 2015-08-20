@@ -29,9 +29,9 @@ fi
 ARCHIVE_DIRECTORY_NAME=consoleapplication_"$VC_NAME"_b"$BUILD_NUMBER"_"$VERSION_NUM"_"$BRANCH_SHA1"
 echo \$ARCHIVE_DIRECTORY_NAME: $ARCHIVE_DIRECTORY_NAME
 
-tar czvf "$ARCHIVE_DIRECTORY_NAME".tar.gz PluginCreator/Win32/ *_version.log
-/c/Program\ Files/7-Zip/7z a -tzip -mx9 "$ARCHIVE_DIRECTORY_NAME" -r PluginCreator/Win32/ *_version.log
-/c/Program\ Files/7-Zip/7z a -t7z -mx9 "$ARCHIVE_DIRECTORY_NAME" -r PluginCreator/Win32/ *_version.log
+tar czvf "$ARCHIVE_DIRECTORY_NAME".tar.gz ConsoleApplication/Win32/ *_version.log
+/c/Program\ Files/7-Zip/7z a -tzip -mx9 "$ARCHIVE_DIRECTORY_NAME" -r ConsoleApplication/Win32/ *_version.log
+/c/Program\ Files/7-Zip/7z a -t7z -mx9 "$ARCHIVE_DIRECTORY_NAME" -r ConsoleApplication/Win32/ *_version.log
 
 tar czvf "$ARCHIVE_DIRECTORY_NAME"_versionlog.tar.gz *_version.log
 /c/Program\ Files/7-Zip/7z a -tzip -mx9 "$ARCHIVE_DIRECTORY_NAME"_versionlog *_version.log
@@ -43,9 +43,9 @@ DEBUG_DIRECTORY_NAME=consoleapplication_"$VC_NAME"_b"$BUILD_NUMBER"_"$VERSION_NU
 echo \$DEBUG_DIRECTORY_NAME: $DEBUG_DIRECTORY_NAME
 mkdir "$DEBUG_DIRECTORY_NAME"
 
-find PluginCreator/Win32/Debug -type f -name '*[dD].*' -exec cp -pv {} "$DEBUG_DIRECTORY_NAME" \;
+find ConsoleApplication/Win32/Debug -type f -name '*[dD].*' -exec cp -pv {} "$DEBUG_DIRECTORY_NAME" \;
 cp -rpv Projects/RTE/include "$DEBUG_DIRECTORY_NAME"
-find PluginCreator/Win32/Debug -type f -name '*[dD].*' -exec cp -pv {} "$DEBUG_DIRECTORY_NAME" \;
+find ConsoleApplication/Win32/Debug -type f -name '*[dD].*' -exec cp -pv {} "$DEBUG_DIRECTORY_NAME" \;
 cp -pv *_version.log "$DEBUG_DIRECTORY_NAME"
 
 tar czvf "$DEBUG_DIRECTORY_NAME".tar.gz "$DEBUG_DIRECTORY_NAME"
