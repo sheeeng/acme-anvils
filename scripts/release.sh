@@ -17,5 +17,5 @@ RELEASE_DIRECTORY=/c/jenkins/"$VC_NAME"
 mkdir -p $RELEASE_DIRECTORY
 cp -frv *.7z $RELEASE_DIRECTORY
 
-find ConsoleApplication/Win32/Debug -type f ! -name '*.exp' -a ! -name '*.ilk' -a -name '*[dD].*' -exec cp -pv {} "$RELEASE_DIRECTORY" \;
-find ConsoleApplication/Win32/Release -type f ! -name '*.exp' -a ! -name '*.ilk' -a ! -name '*[dD].*' -exec cp -pv {} "$RELEASE_DIRECTORY" \;
+find ConsoleApplication/Debug -type f ! -name '*.exp' -a ! -name '*.ilk' -a -name '*[dD].*' -exec cp -pv {} "$RELEASE_DIRECTORY" \;
+find ConsoleApplication/Release -type f ! -name '*.exp' -a ! -name '*.ilk' -a ! -name '*[dD].*' -exec cp -pv {} "$RELEASE_DIRECTORY" \;
